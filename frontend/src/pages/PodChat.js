@@ -22,7 +22,7 @@ export default function PodChat() {
 
         const fetchProgress = async () => {
             try {
-                const res = await axios.post("http://localhost:5000/api/users/create", {
+                const res = await axios.post("https://armor-fly-app.onrender.com/api/users/create", {
                     skills: [],
                     personality: "",
                     anonymousName: anonName
@@ -47,7 +47,7 @@ export default function PodChat() {
 
     const submitProgress = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/progress/update", {
+            const res = await axios.post("https://armor-fly-app.onrender.com/api/progress/update", {
                 anonName,
                 message: progressMsg,
             });
@@ -62,7 +62,7 @@ export default function PodChat() {
 
     const fetchProgress = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/users/create", {
+            const res = await axios.post("https://armor-fly-app.onrender.com/api/users/create", {
                 skills: [],
                 personality: "",
                 anonymousName: anonName
@@ -77,7 +77,7 @@ export default function PodChat() {
 
     const thumbsUp = async (index) => {
         try {
-            const res = await axios.post("http://localhost:5000/api/progress/thumb", {
+            const res = await axios.post("https://armor-fly-app.onrender.com/api/progress/thumb", {
                 anonName,
                 index
             });
@@ -95,7 +95,7 @@ export default function PodChat() {
         formData.append("anonName", anonName);
         setUploading(true);
         try {
-            const res = await axios.post("http://localhost:5000/api/upload/image", formData);
+            const res = await axios.post("https://armor-fly-app.onrender.com/api/upload/image", formData);
             setProgressList(res.data.user.progress);
         } catch (err) {
             alert("Upload failed");
@@ -105,7 +105,7 @@ export default function PodChat() {
 
     const handleConnectionRequest = async () => {
         try {
-            const res = await axios.post("https://amor-fly-api.onrender.com/api/connection/match", {
+            const res = await axios.post("https://armor-fly-app.onrender.com/api/connection/match", {
                 anonName,
             });
             alert("✅ You are matched with: " + res.data.match);
