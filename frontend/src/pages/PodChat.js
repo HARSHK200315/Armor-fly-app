@@ -15,6 +15,7 @@ export default function PodChat() {
     // Join pod and handle incoming messages
     useEffect(() => {
         socket.emit("joinPod", { podId });
+        socket.emit("registerUser", anonName);
 
         socket.on("receiveMessage", (message) => {
             setMessages((prev) => [...prev, message]);
