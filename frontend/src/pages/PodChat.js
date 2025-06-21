@@ -105,7 +105,7 @@ export default function PodChat() {
 
     const handleConnectionRequest = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/connection/match", {
+            const res = await axios.post("https://amor-fly-api.onrender.com/api/connection/match", {
                 anonName,
             });
             alert("✅ You are matched with: " + res.data.match);

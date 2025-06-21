@@ -10,7 +10,7 @@ export default function SkillForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/users/create", {
+      const res = await axios.post("https://amor-fly-api.onrender.com/api/users/create", {
         skills: [skills],
         personality,
       });
