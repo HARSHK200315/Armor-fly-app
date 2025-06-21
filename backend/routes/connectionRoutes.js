@@ -26,10 +26,14 @@ router.post("/match", async (req, res) => {
     });
 
     // Filter only online users
-    const { onlineUsers } = require("../server");
+    console.log("🌐 Online Users:", [...onlineUsers.keys()]);
+    console.log("🔍 Candidates:", candidates.map(c => c.anonymousName));
+
     const onlineMatches = candidates.filter((u) =>
       onlineUsers.has(u.anonymousName)
     );
+
+    console.log("✅ Online Matches:", onlineMatches.map(u => u.anonymousName));
 
     if (onlineMatches.length === 0)
       return res.status(404).json({ error: "No online match found" });

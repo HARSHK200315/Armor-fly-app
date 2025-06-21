@@ -50,6 +50,7 @@ io.on("connection", (socket) => {
   socket.on("registerUser", (anonName) => {
     onlineUsers.set(anonName, socket.id);
     console.log(`✅ ${anonName} is now online`);
+    console.log("🌐 Current online users:", [...onlineUsers.keys()]);
   });
 
   // Join a pod chat room
