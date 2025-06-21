@@ -37,5 +37,5 @@ Users track their learning progress, give peer feedback, and unlock 1:1 connecti
 
 ## 🚀 Live Demo
 
-- 🔗 Frontend: [https://your-vercel-link](https://armor-fly-app.vercel.app)
-- 🔗 Backend API: [https://your-render-link](https://armor-fly-app.onrender.com)
+- 🔗 Frontend: [vercel-link](https://armor-fly-app.vercel.app)
+- 🔗 Backend API: [render-link](https://armor-fly-app.onrender.com)
