@@ -1,4 +1,4 @@
 import { io } from "socket.io-client";
 
 // 👇 If your backend is running locally:
-export const socket = io("http://localhost:5000");
+export const socket = io("https://armor-fly-app.onrender.com");
